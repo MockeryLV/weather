@@ -86,6 +86,7 @@ if(isset($_GET['city'])){
 
     <h2 align="center">Today</h2>
     <div class="container">
+        <div class="line">
         <?php foreach ($initializer->getForecast()[0]->getHours() as $item): ?>
         <?php if($currentTime <= (int) explode(':',explode(' ',$item->time)[1])[0] && $hoursCounter < $hours):?>
         <div class="block">
@@ -103,6 +104,7 @@ if(isset($_GET['city'])){
         <?php endif;?>
         <?php endforeach;?>
         <?php $hoursCounter = 0; ?>
+            <div class="line">
     </div>
 
 </body>
