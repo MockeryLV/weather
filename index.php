@@ -61,6 +61,7 @@ if(isset($_GET['city'])){
     </div>
 
     <h1 align="center"> <?= $location ?></h1>
+    <h2 align="center"><?=explode(' ', $xml->location->localtime)[1]?></h2>
     <div class="container">
         <div class="line">
         <?php foreach ($initializer->getForecast() as $item): ?>
